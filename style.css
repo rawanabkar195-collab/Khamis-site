@@ -28,20 +28,6 @@
     margin-bottom: 25px;
 }
 
-@media (max-width: 768px) {
-    #welcome-section {
-        height: 100vh; 
-    }
-    .welcome-box h1 {
-        font-size: 1.5rem !important;
-        margin-bottom: 10px;
-    }
-    .welcome-box p {
-        font-size: 0.9rem !important;
-        margin-bottom: 15px;
-    }
-}
-
 .welcome-title {
     font-size: 2rem !important;
     color: #5d2e14;
@@ -88,6 +74,35 @@
 
 * {
     box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    nav, .navbar {
+        padding: 5px 0; 
+    }
+
+    nav ul, .nav-links {
+        gap: 5px; 
+        justify-content: center; 
+        flex-wrap: nowrap; 
+        overflow-x: auto; 
+        padding: 0 10px;
+    }
+
+    nav ul li a, .nav-links a {
+        font-size: 11px !important; 
+        padding: 5px 3px; 
+        white-space: nowrap; 
+    }
+
+    .home, section:first-of-type {
+        margin-top: 60px; 
+    }
+
+    .home h1 {
+        font-size: 1.3rem; 
+        margin-bottom: 10px;
+    }
 }
 
 body {
