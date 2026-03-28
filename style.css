@@ -1,15 +1,45 @@
-/* تنسيق قسم الترحيب للجوال */
-.welcome-section {
-    width: 100%;
-    height: auto !important; 
-    min-height: 70vh; 
-    padding-top: 100px; 
-    padding-bottom: 50px;
+.welcome-section, #welcome {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fdf5e6;
+    width: 90%; 
+    max-width: 500px; 
+    min-height: 400px; 
+    
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #d89766; 
+    border: 3px solid #944416;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #4b1d0b;
+}
+
+.welcome-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    #welcome-section {
+        height: 100vh; 
+    }
+    .welcome-box h1 {
+        font-size: 1.5rem !important;
+        margin-bottom: 10px;
+    }
+    .welcome-box p {
+        font-size: 0.9rem !important;
+        margin-bottom: 15px;
+    }
 }
 
 .welcome-title {
@@ -30,26 +60,6 @@
 .start-btn {
     font-size: 1.1rem !important; 
     margin-top: 20px;
-}
-
-/* تنسيق الـ Navbar للجوال */
-.navbar {
-    background-color: #5d2e14 !important;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.nav-links {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.nav-links a {
-    font-size: 0.9rem !important;
-    padding: 5px 0;
 }
 
 /* تنسيق الزجزاج للجوال */
@@ -232,76 +242,67 @@ color: #5c3a21;
     }
 }
 
+
 .menu {
-    background-color: rgba(216, 151, 102, 0.85);
-    padding: 10px;
-    position: fixed;
+    background-color: rgba(216, 151, 102, 0.85); 
+    padding: 15px 0;
+    position: fixed; 
     top: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .menu ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    margin: 0px;
-    gap: 30px;
-}
-
-.menu ul li {
-    margin: 0 15px;
+    margin: 0;
+    padding: 0;
+    gap: 25px;
 }
 
 .menu ul li a {
     text-decoration: none;
-    color: rgb(75, 29, 11);
+    color: #5d2e14; 
     font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
 .menu ul li a:hover {
-    color: #944416;
+    color: #944416; 
 }
 
-.menu{
-    display: flex;
-    gap: 20px;
+.menu ul li a, .nav-links a {
+    position: relative;
+    transition: 0.3s;
 }
 
-@media (max-width: 768px){
+.menu ul li a:hover, .nav-links a:hover {
+    color: #5d2e14; 
+}
 
-    .menu{
-        display: block;
-    }
+.menu ul li a::after, .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #944416;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.menu ul li a:hover::after, .nav-links a:hover::after {
+    width: 100%;
 }
 
 body{
     margin: 0;
     background: rgb(215,155,109,0.85);
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.welcome-section{
-    background: rgba(216, 151, 102, 0.85);
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    border: 2px solid #944416;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.welcome-section p{
-    padding-right: 20px;
-    padding-left: 20px;
-    color: #5c3a21;
-}
-
-.welcome-section h1{
-    color: #5c3a21;
-    font-size: 36px;
-    margin-bottom: 20px;
 }
 
 button{
@@ -316,33 +317,6 @@ button{
 
 button:hover{
     background-color: #663613;
-}
-
-/* إصلاح قسم الترحيب */
-#welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(216, 151, 102, 0.95);
-    width: 100%; 
-    height: 100vh; 
-    position: relative; 
-    top: 0;
-    left: 0;
-    transform: none;
-    margin: 0;
-    border-radius: 0;
-    z-index: 1001;
-}
-
-.menu {
-    background-color: #5d2e14; 
-    padding: 15px;
-    position: sticky; 
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .home h1 {
@@ -583,26 +557,6 @@ button:hover, .discover-btn:hover {
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 20px rgba(0,0,0,0.3);
-}
-
-
-.menu ul li a {
-    position: relative;
-}
-
-.menu ul li a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    right: 0;
-    background-color: #944416;
-    transition: width 0.3s ease;
-}
-
-.menu ul li a:hover::after {
-    width: 100%;
 }
 
 body {
