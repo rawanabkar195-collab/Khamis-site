@@ -76,32 +76,34 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
-    nav, .navbar {
-        padding: 5px 0; 
+.home {
+    margin-top: 80px !important; 
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    nav, .menu {
+        padding: 8px 0 !important;
     }
 
-    nav ul, .nav-links {
-        gap: 5px; 
-        justify-content: center; 
-        flex-wrap: nowrap; 
-        overflow-x: auto; 
-        padding: 0 10px;
+    .nav-links, .menu ul {
+        gap: 5px 10px !important; 
+        padding: 0 5px !important;
     }
 
-    nav ul li a, .nav-links a {
-        font-size: 11px !important; 
-        padding: 5px 3px; 
-        white-space: nowrap; 
+    .nav-links a, .menu ul li a {
+        font-size: 12px !important; 
+        padding: 4px !important;
+        display: inline-block; 
     }
 
-    .home, section:first-of-type {
-        margin-top: 60px; 
+    .home {
+        margin-top: 60px !important; 
     }
 
     .home h1 {
-        font-size: 1.3rem; 
-        margin-bottom: 10px;
+        font-size: 1.4rem !important;
+        margin-top: 10px !important;
     }
 }
 
