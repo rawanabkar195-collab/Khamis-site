@@ -319,12 +319,16 @@ button:hover{
     background-color: #663613;
 }
 
-.home h1 {
-    margin-top: 40px; 
-    padding: 20px;
+@media screen and (max-width: 768px) {
+    .home, section {
+        padding-top: 120px !important; 
+    }
+
+    .home h1 {
+        margin-top: 20px; 
+        font-size: 1.5rem; 
+    }
 }
-
-
 
 #mainSite{
     display: none;
